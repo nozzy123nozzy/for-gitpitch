@@ -22,7 +22,7 @@ wpa2+psk(よくあるSSID/Pass認証）の提供ならdebian sidの場合、何�
 ---
 @snap[west span-40 text-center]
 Gnome3のwifiメニュー  
-![gnome3 wifi menu](gnome-wifi-modified.png)
+![gnome3 wifi menu](/asset/59/gnome-wifi-modified.png)
 @snapend
 @snap[east span-40 text-center]
 wpa supplicantで直接接続
@@ -63,12 +63,14 @@ wifiが切れると、場合によってはStep1.からやり直しになるこ�
 いちいちwifi切れる度にwindows10へ切り替えるのは嫌ですよね。  
 @snapend
 ---
+@snap[north-west]
 ### web認証(captive portal)とは
 認証の仕組みの大筋は次のとおりです。  
 ![](https://www.hitachi-solutions.co.jp/aruba/sp/guide/tech/img/img12_lan_guide.jpg)  　
 
 wifi機材により流儀が異なるので、うまく動くとは限りません。  
 手元のdebian sidではwifiに接続できるものの、直後のブラウザは何も通信しません。
+@snapend
 ---
 @snap[north-west]
 ### 解析開始
@@ -122,7 +124,8 @@ debian sidでやってみました。
 @snapend
 ---
 @snap[north-west]
-- Step2. コマンドラインからcurl -v http://www.google.comを実行。  
+- Step2. コマンドラインから  
+curl -v http://www.google.comを実行。  
 ```http
 $ curl -v http://www.google.co.jp
 ...中略...
@@ -134,7 +137,10 @@ Accept: */*
 * Mark bundle as not supporting multiuse
 HTTP/1.1 302 Moved Temporarily
 Connection: close
-Location: https://portal.hoge.fuga/logon?wlan_id=XXXXXXX-YYYY-XXXX-YYYY-XXXXXXXXX&ap_mac=ZZZZZZZZZZ&client_mac=AAAAAAAA&url=http%3A%2F%2Fwww.google.co.jp%2F
+Location: https://portal.hoge.fuga/logon?
+wlan_id=XXXXXXX-YYYY-XXXX-YYYY-XXXXXXXXX&
+ap_mac=ZZZZZZZZZZ&client_mac=AAAAAAAA&
+url=http%3A%2F%2Fwww.google.co.jp%2F
 ```
 @snapend
 ---
