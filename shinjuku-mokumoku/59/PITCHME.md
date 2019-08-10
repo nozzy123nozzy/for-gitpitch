@@ -63,9 +63,10 @@ wifiが切れると、場合によってはStep1.からやり直しになるこ�
 いちいちwifi切れる度にwindows10へ切り替えるのは嫌ですよね。  
 @snapend
 ---
-###web認証(captive portal)とは
+### web認証(captive portal)とは
 認証の仕組みの大筋は次のとおりです。  
-![](https://www.hitachi-solutions.co.jp/aruba/sp/guide/tech/img/img12_lan_guide.jpg)　　
+![](https://www.hitachi-solutions.co.jp/aruba/sp/guide/tech/img/img12_lan_guide.jpg)  　
+
 wifi機材により流儀が異なるので、うまく動くとは限りません。  
 手元のdebian sidではwifiに接続できるものの、直後のブラウザは何も通信しません。
 ---
@@ -96,6 +97,9 @@ YAMAHA CORPORATIONが引き当たりました！
 @snap[north-west] 
 wifiがつながったあと、HTTP通信を実施しないとWeb認証が始まらないとあります。  
 ![](http://www.rtpro.yamaha.co.jp/AP/docs/wlx313/images/captive_portal/cp_overview.png)  
+@snapend
+---
+@snap[north-west]
 昨今googleなど昨今のWebサイトはTLS1.2化が進んでおり、ページはHTTPS通信となってしまいます。このため、debian sid上ではHTTPの通信を行わかなかったので、Web認証が始まらなかったとなります。  
 @snapend
 ---
@@ -103,14 +107,21 @@ wifiがつながったあと、HTTP通信を実施しないとWeb認証が始ま
 ### なぜwindows10/mac/スマホはWeb認証できるのか？
 これらのOSは、Web認証に対応するため、ひそかにHTTP通信をする機能が備わっていました。  
 これはCaptive Portal Detection Strategyという手法名なのだそうです。  
+@snapend
+---
+@snap[north-west]
+### 各OSのCaptive Portal Detection Strategy
 ![](https://cdn-ak.f.st-hatena.com/images/fotolife/a/ao0780/20170221/20170221100614.png)  
 @snapend
 ---
 @snap[north-west]
 ### じゃあdebian sidでは...
-http通信をすればRedirectが置き、Web認証画面まで遷移できるはずなので、
+http通信をすればRedirectが起き、Web認証画面まで遷移できるはずなので、
 debian sidでやってみました。  
 - Step1. wifiをSSID/Passで接続する。  
+@snapend
+---
+@snap[north-west]
 - Step2. コマンドラインからcurl -v http://www.google.comを実行。  
 ```http
 $ curl -v http://www.google.co.jp
@@ -125,6 +136,9 @@ HTTP/1.1 302 Moved Temporarily
 Connection: close
 Location: https://portal.hoge.fuga/logon?wlan_id=XXXXXXX-YYYY-XXXX-YYYY-XXXXXXXXX&ap_mac=ZZZZZZZZZZ&client_mac=AAAAAAAA&url=http%3A%2F%2Fwww.google.co.jp%2F
 ```
+@snapend
+---
+@snap[north-west]
 - Step3. Locationで示されるURLをchromeにコピペ。無事Web認証画面が出てくるので必要事項を答える。  
 - Step4. 無事debian sidでもWifiが利用できるようになりましたー🙆  
 @snapend
