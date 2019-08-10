@@ -21,12 +21,10 @@
 ### よくあるSSID/PASSのみのwifi接続
 wpa2+psk(よくあるSSID/Pass認証）の提供ならdebian sidの場合、何も苦労せずに繋がります。  
 ---
-@snap[west span-40 text-center]
 Gnome3のwifiメニュー  
 ![gnome3 wifi menu](/asset/59/gnome-wifi-modified.png)
-@snapend
 ---
-@snap[west  span-40 text-08]
+@snap[north-west text-08]
 wpa supplicantで直接接続
 ```bash
 cat /etc/network/interfaces
