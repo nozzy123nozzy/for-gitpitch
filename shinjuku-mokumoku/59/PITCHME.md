@@ -64,7 +64,7 @@ wifiが切れると、場合によってはStep1.からやり直しになるこ�
 いちいちwifi切れる度にwindows10へ切り替えるのは嫌ですよね。  
 @snapend
 ---
-@snap[north-west]
+@snap[north-west text-08]
 ### web認証(captive portal)とは
 認証の仕組みの大筋は次のとおりです。  
 ![](https://www.hitachi-solutions.co.jp/aruba/sp/guide/tech/img/img12_lan_guide.jpg)  
