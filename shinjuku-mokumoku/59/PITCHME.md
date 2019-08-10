@@ -51,8 +51,8 @@ sudo ifup wlp5s0=wlan0_wifi
 ---
 @snap[north-west]
 ### 最初に発見したつなぎ方
-* Step1. ノートPCをwindows10に切り替えて一度wifiに接続する。  
-* Step2. ノートPCをdebian sidに切り替えて、先述の通常のwifi接続をする。  
+- Step1. ノートPCをwindows10に切り替えて一度wifiに接続する。  
+- Step2. ノートPCをdebian sidに切り替えて、先述の通常のwifi接続をする。  
 
 一応これでdebian sidはWeb認証がStep1.で完了しているので、Web認証無しでwifiにつながるようになります。  
 @snapend
@@ -110,8 +110,8 @@ wifiがつながったあと、HTTP通信を実施しないとWeb認証が始ま
 ### じゃあdebian sidでは...
 http通信をすればRedirectが置き、Web認証画面まで遷移できるはずなので、
 debian sidでやってみました。  
-* Step1. wifiをSSID/Passで接続する。  
-* Step2. コマンドラインからcurl -v http://www.google.comを実行。  
+- Step1. wifiをSSID/Passで接続する。  
+- Step2. コマンドラインからcurl -v http://www.google.comを実行。  
 ```http
 $ curl -v http://www.google.co.jp
 ...中略...
@@ -125,8 +125,8 @@ HTTP/1.1 302 Moved Temporarily
 Connection: close
 Location: https://portal.hoge.fuga/logon?wlan_id=XXXXXXX-YYYY-XXXX-YYYY-XXXXXXXXX&ap_mac=ZZZZZZZZZZ&client_mac=AAAAAAAA&url=http%3A%2F%2Fwww.google.co.jp%2F
 ```
-* Step3. Locationで示されるURLをchromeにコピペ。無事Web認証画面が出てくるので必要事項を答える。  
-* Step4. 無事debian sidでもWifiが利用できるようになりましたー🙆  
+- Step3. Locationで示されるURLをchromeにコピペ。無事Web認証画面が出てくるので必要事項を答える。  
+- Step4. 無事debian sidでもWifiが利用できるようになりましたー🙆  
 @snapend
 ---
 ### おわりに
