@@ -1,3 +1,4 @@
+@snap[north-west text-08]
 ### やったこと/わかったこと
 
 - gitpichの使い方を覚える
@@ -6,6 +7,7 @@
 	- ELFの.got/.plt/.got.pltの仕組みがあらためてわかる。
 	- GOTによるDynamicLinkingがセキュリティの要請からも必要であることがわかった。
 	- DisassemblyについてDynamic DisassemblyとかRecursive Disassemblyというのがあり、その利点がわかった。
+@snapend
 ---
 
 ![](https://images-fe.ssl-images-amazon.com/images/I/51SYed0K4NL.jpg)
