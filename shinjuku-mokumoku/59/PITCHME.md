@@ -2,8 +2,9 @@
 ### やったこと/わかったこと
 
 - debian sidのマシンから、wifiのつなぎ方がわかる。  
-- gitpitchの使い方を覚える。
+- gitpitchの使い方を覚える  
 - wifiのつなぎ方のLT書いたら時間がなくなってしまった...😓  
+誰かgitpitchの編集のコツ教えてー。 
 
 @snapend
 
@@ -66,7 +67,7 @@ wifiが切れると、場合によってはStep1.からやり直しになるこ�
 @snap[north-west]
 ### web認証(captive portal)とは
 認証の仕組みの大筋は次のとおりです。  
-![](https://www.hitachi-solutions.co.jp/aruba/sp/guide/tech/img/img12_lan_guide.jpg)  　
+![](https://www.hitachi-solutions.co.jp/aruba/sp/guide/tech/img/img12_lan_guide.jpg)  
 
 wifi機材により流儀が異なるので、うまく動くとは限りません。  
 手元のdebian sidではwifiに接続できるものの、直後のブラウザは何も通信しません。
